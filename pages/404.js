@@ -7,7 +7,7 @@ const errorPage = () => {
   const handleInput = () => {
     router.push("/");
   };
-  
+
   {
     /* back to homepage process 3 */
   }
