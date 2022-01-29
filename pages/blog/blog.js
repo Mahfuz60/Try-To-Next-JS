@@ -1,16 +1,32 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar";
-import Head from "next/head";
+import Link from "next/link";
 
-const blog = () => {
+export const getStaticProps = async () => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const blog = ({ data }) => {
   return (
     <div>
-      <Head>
-        <title>Blog page</title>
-        <meta name="viewport" content="width=device-width"></meta>
-      </Head>
       <NavBar></NavBar>
-      <h1>This is blog content</h1>
+      {data.slice(0, 10).map((currentData) => {
+        return (
+          <div key={currentData.id} className="staticData">
+            <h1>{currentData.id}</h1>
+            <Link href={`/blog/${currentData.id}`}>
+              <h3>{currentData.title}</h3>
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
 };

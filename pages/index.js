@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 
 function index(props) {
   return (
-    <div className="container">
+    <div >
       <NavBar></NavBar>
     </div>
   );

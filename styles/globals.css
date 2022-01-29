@@ -1,16 +1,15 @@
 .container {
   padding: 0px;
   margin: 0px;
+  background-color: rgb(248, 199, 136);
+  height: 80px;
 }
 .navbar {
-  background-color: rgb(248, 199, 136);
-  height: 100vh;
   text-align: center;
 }
 .navbar ul li {
   list-style: none;
   text-decoration: none;
-  
 }
 
 .navbar ul li a {
@@ -21,5 +20,27 @@
   float: left;
   margin-right: 15px;
   display: block;
-  
+}
+.navbar ul li a:hover {
+  color: rgb(241, 8, 54);
+  font-weight: bold;
+  padding: 5px;
+}
+
+.staticData {
+  text-align: center;
+  float: left;
+  background-color: rgb(68, 63, 63);
+  padding: 10px;
+  height: 100px;
+  width: 80%;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  color: white;
+}
+.staticData h1 {
+  color: blue;
+}
+.staticData h3:hover {
+  color: blue;
 }

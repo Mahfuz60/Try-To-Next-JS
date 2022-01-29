@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <div >
+    <div className="container">
       <nav  className="navbar">
         <ul>
           <li>
